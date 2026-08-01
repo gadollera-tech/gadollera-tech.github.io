@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glister Diadem Dollera — Writing Portfolio</title>
+<meta name="description" content="Glister Diadem Dollera — Writer, Copywriter, Content Strategist, SEO Writer, and Social Media Manager.">
+<style>
+:root{
+  --maroon:#651f2b;
+  --maroon-dark:#43131c;
+  --maroon-soft:#8a4653;
+  --green:#315b48;
+  --green-dark:#203f32;
+  --green-soft:#e8eee9;
+  --gray-50:#f7f7f5;
+  --gray-100:#eeeeeb;
+  --gray-200:#d9dcd7;
+  --gray-500:#70766f;
+  --gray-800:#2b2d2a;
+  --white:#fff;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--gray-50);color:var(--gray-800);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,calc(100% - 44px));margin:auto}
+nav{position:sticky;top:0;z-index:100;background:rgba(247,247,245,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-200)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800}
+.brand-mark{width:38px;height:38px;border-radius:50%;background:var(--maroon);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:17px}
+.brand-name{font-family:var(--serif);font-size:18px}
+.nav-links{display:flex;gap:25px;font-size:12px;color:var(--gray-500);font-weight:700}
+.nav-links a:hover{color:var(--maroon)}
+.hero{position:relative;overflow:hidden;padding:115px 0 105px;background:linear-gradient(135deg,#f7f7f5 0%,#f1f3ef 55%,#e8eee9 100%);border-bottom:1px solid var(--gray-200)}
+.hero:before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:rgba(101,31,43,.06);right:-180px;top:-180px}
+.hero:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(49,91,72,.08);right:180px;bottom:-160px}
+.hero-content{position:relative;z-index:2}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:10px;font-weight:800;color:var(--maroon);margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-size:clamp(50px,8vw,100px);line-height:.94;letter-spacing:-.055em;font-weight:500;max-width:920px}
+.hero h1 span{color:var(--green)}
+.hero-copy{max-width:690px;font-size:18px;color:var(--gray-500);margin-top:30px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 19px;border:1px solid var(--maroon);font-size:12px;font-weight:800;transition:.22s}
+.btn.primary{background:var(--maroon);color:#fff}
+.btn.secondary{background:transparent;color:var(--maroon)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(65,19,28,.12)}
+section{padding:92px 0;border-bottom:1px solid var(--gray-200)}
+.section-head{display:grid;grid-template-columns:250px 1fr;gap:45px;margin-bottom:48px}
+.section-number{font-size:11px;color:var(--green);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.section-title{font-family:var(--serif);font-size:clamp(38px,5vw,62px);font-weight:500;line-height:1.03;letter-spacing:-.035em}
+.section-intro{color:var(--gray-500);max-width:720px;margin-top:16px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;background:var(--white);border:1px solid var(--gray-200);padding:28px;min-height:310px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:.25s}
+.card:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:var(--maroon)}
+.card.green:before{background:var(--green)}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(43,45,42,.09);border-color:#c5cac4}
+.logo-box{width:54px;height:54px;border-radius:12px;background:var(--gray-100);display:grid;place-items:center;color:var(--maroon);font-family:var(--serif);font-size:19px;font-weight:700;border:1px solid var(--gray-200)}
+.logo-box.green{color:var(--green)}
+.card-tag{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--maroon);font-weight:800;margin-top:20px}
+.card h3{font-family:var(--serif);font-size:28px;line-height:1.12;margin:9px 0 10px;font-weight:500}
+.card p{font-size:13px;color:var(--gray-500)}
+.card-link{display:inline-flex;margin-top:22px;font-size:11px;font-weight:800;color:var(--green);align-items:center;gap:5px}
+.card-link:hover{color:var(--maroon)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--gray-200);border-left:1px solid var(--gray-200)}
+.service{padding:30px;border-right:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);background:#fff;transition:.2s}
+.service:hover{background:var(--green-soft)}
+.service-num{font-size:11px;color:var(--maroon);font-weight:800}
+.service h3{font-family:var(--serif);font-size:25px;margin:12px 0 7px;font-weight:500}
+.service p{font-size:13px;color:var(--gray-500)}
+.project{display:grid;grid-template-columns:230px 1fr;gap:48px;padding:35px 0;border-top:1px solid var(--gray-200)}
+.project:first-child{border-top:0}
+.project-meta{font-size:11px;color:var(--maroon);font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+.project h3{font-family:var(--serif);font-size:32px;line-height:1.1;font-weight:500;margin-bottom:9px}
+.project p{color:var(--gray-500);max-width:760px;font-size:14px}
+.project-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:17px;font-size:11px;font-weight:800;color:var(--green)}
+.project-links a:hover{color:var(--maroon)}
+.writing-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 50px}
+.writing-item{position:relative;padding:27px 0;border-top:1px solid var(--gray-200);transition:.2s}
+.writing-item:hover{padding-left:10px}
+.writing-item h3{font-family:var(--serif);font-size:23px;line-height:1.2;font-weight:500}
+.writing-item p{font-size:12px;color:var(--gray-500);margin-top:5px}
+.writing-item a{display:inline-block;color:var(--green);font-size:11px;font-weight:800;margin-top:10px}
+.writing-item a:hover{color:var(--maroon)}
+.pill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:23px}
+.pill{background:var(--green-soft);border:1px solid #d7e2da;padding:9px 13px;font-size:11px;color:var(--green-dark);font-weight:600}
+.social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.social-card{background:#fff;border:1px solid var(--gray-200);padding:20px;min-height:120px}
+.social-card strong{font-family:var(--serif);font-size:19px;font-weight:500;display:block}
+.social-card span{font-size:11px;color:var(--gray-500)}
+.ref-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.ref{background:#fff;border:1px solid var(--gray-200);padding:23px}
+.ref h3{font-family:var(--serif);font-size:22px;font-weight:500}
+.ref p{font-size:12px;color:var(--gray-500);margin-top:5px}
+.contact{background:var(--maroon-dark);color:#fff;border:0}
+.contact .eyebrow{color:#d7aab2}
+.contact .section-title{max-width:800px}
+.contact-copy{color:#eadfe1;max-width:650px;margin-top:20px}
+.contact .btn{border-color:#fff;color:#fff}
+.contact .btn.primary{background:#fff;color:var(--maroon-dark)}
+footer{padding:30px 0;font-size:11px;color:var(--gray-500);display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){
+ .nav-links{display:none}
+ .hero{padding:80px 0 75px}
+ .section-head,.project{grid-template-columns:1fr;gap:18px}
+ .feature-grid,.services,.writing-grid,.ref-grid{grid-template-columns:1fr}
+ .social-grid{grid-template-columns:1fr 1fr}
+ .project{padding:28px 0}
+}
+@media(max-width:520px){
+ .container{width:min(100% - 28px,1160px)}
+ .hero h1{font-size:55px}
+ .social-grid{grid-template-columns:1fr}
+ footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container nav-inner">
+<a class="brand" href="#home"><span class="brand-mark">GD</span><span class="brand-name">Glister Diadem Dollera</span></a>
+<div class="nav-links">
+<a href="#work">Featured</a><a href="#services">Services</a><a href="#institutional">Institutional</a><a href="#seo">SEO</a><a href="#social">Social</a><a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<main id="home">
+
+<section class="hero">
+<div class="container hero-content reveal">
+<div class="eyebrow">Writer · Copywriter · Content Strategist</div>
+<h1>Words that <span>connect</span>, inform, and move people.</h1>
+<p class="hero-copy">I'm Glister Diadem Dollera, a writer and content strategist with experience across healthcare, academic institutions, nonprofit organizations, faith-based media, e-commerce, and international clients.</p>
+<div class="buttons">
+<a class="btn primary" href="#work">Explore my work ↓</a>
+<a class="btn secondary" href="#contact">Let's work together →</a>
+</div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+<div class="section-head reveal"><div class="section-number">01 / Featured Work</div><div><h2 class="section-title">Professional work with purpose.</h2><p class="section-intro">My strongest work sits at the intersection of strategy, writing, and meaningful communication. These are the projects I would put first when introducing my work to a potential client or employer.</p></div></div>
+<div class="feature-grid">
+<article class="card reveal"><div><div class="logo-box">SHS</div><div class="card-tag">Institutional Communications · 2025</div><h3>UPM-SHS at 50</h3><p>Promotions, content planning, strategy, editing, social media, and website work for the 2025 anniversary project.</p></div><a class="card-link" href="https://upmshsat50.netlify.app/" target="_blank">Explore project ↗</a></article>
+<article class="card green reveal"><div><div class="logo-box green">NTHC</div><div class="card-tag">Healthcare · Digital Health</div><h3>UP Manila National Telehealth Center</h3><p>Content strategy and social media management for a national health institution focused on telehealth and digital health.</p></div><a class="card-link" href="http://fb.com/upmtelehealth" target="_blank">View Facebook page ↗</a></article>
+<article class="card reveal"><div><div class="logo-box">NIH</div><div class="card-tag">Academic · Healthcare</div><h3>UP Manila National Institutes of Health</h3><p>Content strategy, social media management, and website creation for a major academic health institution.</p></div><a class="card-link" href="http://fb.com/upmnih" target="_blank">View Facebook page ↗</a></article>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-head reveal"><div class="section-number">02 / What I Do</div><div><h2 class="section-title">From strategy to the final word.</h2><p class="section-intro">I work across the full content process—from planning and research to writing, editing, publishing, and digital communication.</p></div></div>
+<div class="services">
+<div class="service reveal"><span class="service-num">01</span><h3>Content Strategy</h3><p>Planning content around audience needs, organizational goals, and communication objectives.</p></div>
+<div class="service reveal"><span class="service-num">02</span><h3>Copywriting</h3><p>Landing pages, promotional copy, advertising copy, and persuasive messaging.</p></div>
+<div class="service reveal"><span class="service-num">03</span><h3>SEO Writing</h3><p>Research-driven, search-friendly articles and long-form content for international clients.</p></div>
+<div class="service reveal"><span class="service-num">04</span><h3>Social Media</h3><p>Social media strategy, captions, content planning, publishing, and page management.</p></div>
+<div class="service reveal"><span class="service-num">05</span><h3>Website Content</h3><p>Clear, audience-focused website copy and digital content for organizations and institutions.</p></div>
+<div class="service reveal"><span class="service-num">06</span><h3>Creative Writing</h3><p>Personal essays, literary pieces, storytelling, and writing that connects on a human level.</p></div>
+</div>
+</div>
+</section>
+
+<section id="institutional">
+<div class="container">
+<div class="section-head reveal"><div class="section-number">03 / Institutional Work</div><div><h2 class="section-title">Communications for organizations that matter.</h2><p class="section-intro">My institutional work includes healthcare and academic organizations, where clear, responsible communication is essential.</p></div></div>
+
+<div class="project reveal"><div class="project-meta">UPM-SHS · 2026 Anniversary</div><div><h3>UP Manila School of Health Sciences at 50</h3><p>Promotions, content planning, strategy, and editing for the UPM-SHS at 50 anniversary project.</p><div class="project-links"><a href="https://www.facebook.com/upmshs50" target="_blank">Facebook Page ↗</a><a href="https://upmshsat50.netlify.app/" target="_blank">Website ↗</a></div></div></div>
+
+<div class="project reveal"><div class="project-meta">UP Manila · Healthcare</div><div><h3>UP Manila National Telehealth Center</h3><p>Content strategy and social media management supporting digital health and telehealth communications.</p><div class="project-links"><a href="http://fb.com/upmtelehealth" target="_blank">Facebook Page ↗</a></div></div></div>
+
+<div class="project reveal"><div class="project-meta">UP Manila · NIH</div><div><h3>UP Manila National Institutes of Health</h3><p>Content strategy, social media management, and website creation.</p><div class="project-links"><a href="http://fb.com/upmnih" target="_blank">Facebook Page ↗</a></div></div></div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head reveal"><div class="section-number">04 / Copywriting & Campaigns</div><div><h2 class="section-title">Copy built to make ideas clear.</h2><p class="section-intro">Landing pages, advertising copy, and promotional writing developed for different audiences and communication goals.</p></div></div>
+
+<div class="project reveal"><div class="project-meta">Landing Page</div><div><h3>The Great Controversy</h3><p>Landing page copy for a faith-based audience.</p><div class="project-links"><a href="https://greatcontroversy.awr.org/" target="_blank">Visit landing page ↗</a></div></div></div>
+<div class="project reveal"><div class="project-meta">Landing Page · 2024</div><div><h3>SDA Inter-American Division</h3><p>Landing page and promotional copy connected to the ASI Convention 2024.</p><div class="project-links"><a href="https://interamerica.org/event/asi-convention-2024/" target="_blank">View project ↗</a></div></div></div>
+<div class="project reveal"><div class="project-meta">Advertising</div><div><h3>Google Display Ads</h3><p>Sample advertising copy showcasing concise, audience-focused digital messaging.</p><div class="project-links"><a href="https://docs.google.com/spreadsheets/d/1c_SBUJDAjXL08g_fuNAOaKUzu9IVQK_uKjkm8hXWSOg/edit?gid=0#gid=0" target="_blank">View sample ↗</a></div></div></div>
+<div class="project reveal"><div class="project-meta">Video Script</div><div><h3>ASI Convention 2024 Promotion</h3><p>Promotional video scriptwriting for the ASI Convention 2024 campaign.</p><div class="project-links"><a href="https://docs.google.com/document/d/1dd-6pS7hJD35bVTKRn1pbigyt8kkF2KJtbXy_hqrrs0/edit?usp=drivesdk" target="_blank">View script ↗</a></div></div></div>
+</div>
+</section>
+
+<section id="seo">
+<div class="container">
+<div class="section-head reveal"><div class="section-number">05 / Published SEO Writing</div><div><h2 class="section-title">Research-driven writing for global clients.</h2><p class="section-intro">Selected published SEO articles across beauty, fitness, health, lifestyle, home improvement, and Christian media. More links and writeups are available upon request.</p></div></div>
+
+<div class="writing-grid">
+<div class="writing-item reveal"><h3>Top 10 Cosmetic Manufacturer</h3><p>Cambrian Chinese Corp. × NAKO Cosmetics · 2023</p><a href="https://nakocos.com/top-10-cosmetic-manufacturer/" target="_blank">Read article ↗</a></div>
+<div class="writing-item reveal"><h3>How to Open a Gym with No Money</h3><p>Cambrian Chinese Corp. × Yanre Fitness · 2023</p><a href="https://www.yanrefitness.com/how-to-open-a-gym-with-no-money/" target="_blank">Read article ↗</a></div>
+<div class="writing-item reveal"><h3>Teenage Skincare: Acne-Fighting Face Cleansers Guide</h3><p>NOVAEO × TreeActiv SkinCare · 2023</p><a href="https://www.treeactiv.com/blogs/treeactiv-blog/teenage-skincare-acne-fighting-face-cleansers-guide" target="_blank">Read article ↗</a></div>
+<div class="writing-item reveal"><h3>Top 5 Face Cleansers: A Complete Comparison of the Best Products</h3><p>NOVAEO × TreeActiv SkinCare · 2023</p><a href="https://www.treeactiv.com/blogs/treeactiv-blog/top-5-face-cleanser-a-complete-comparison-of-the-best-products" target="_blank">Read article ↗</a></div>
+<div class="writing-item reveal"><h3>Exploring Ergonomic Benefits of StandMore Collapsible Standing Desk</h3><p>NOVAEO × StandMore Standing Desk · 2023</p><a href="https://standmore.com/blogs/news/exploring-ergonomic-benefits-of-standmore-collapsible-standing-desk" target="_blank">Read article ↗</a></div>
+<div class="writing-item reveal"><h3>Organic Monk Fruit Extract: A Sweet Solution to Health-Conscious Living</h3><p>NOVAEO × NatriSweet · 2023</p><a href="https://natrisweet.com/blogs/natrisweet-blog/organic-monk-fruit-extract-a-sweet-solution-to-health-conscious-living" target="_blank">Read article ↗</a></div>
+<div class="writing-item reveal"><h3>Emergency Flood Services to Help Restore Your Business Operations</h3><p>KMA Web Design × Comm-Clean · 2023–2024</p><a href="https://comm-clean.com/emergency-flood-services-to-help-restore-your-business-operations/" target="_blank">Read article ↗</a></div>
+<div class="writing-item reveal"><h3>How to Help Your Family Cope with Anxiety: Tips and Bible Verses</h3><p>Christian Digital Network × Creation Illustrated · 2024</p><a href="https://www.creationillustrated.com/how-to-help-your-family-cope-with-anxiety-tips-and-bible-verses/" target="_blank">Read article ↗</a></div>
+<div class="writing-item reveal"><h3>Why Reading a Magazine Daily Can Transform Your Life!</h3><p>Christian Digital Network × Creation Illustrated · 2024</p><a href="https://www.creationillustrated.com/why-reading-a-magazine-daily-can-transform-your-life/" target="_blank">Read article ↗</a></div>
+</div>
+</div>
+</section>
+
+<section id="social">
+<div class="container">
+<div class="section-head reveal"><div class="section-number">06 / Social Media</div><div><h2 class="section-title">Content that lives where people are.</h2><p class="section-intro">Social media copy, captions, content planning, and page management for organizations, businesses, and community-focused brands.</p></div></div>
+
+<div class="project reveal"><div class="project-meta">Feb–Oct 2024</div><div><h3>Christian Digital Network</h3><p>Created Facebook posts and captions for multiple Christian organizations and platforms.</p><div class="pill-list"><span class="pill">The Mustard Seed</span><span class="pill">Jesus for Asia</span><span class="pill">AdventSource</span><span class="pill">Uchee Pines</span><span class="pill">Harbert Hills Nursing Home</span><span class="pill">Eden Valley Institute</span><span class="pill">Creation Illustrated</span><span class="pill">Voice of Prophecy</span></div></div></div>
+
+<div class="project reveal"><div class="project-meta">Organizations & Institutions</div><div><h3>Social Media Management</h3><p>Social media content, management, and communications for academic, healthcare, institutional, business, and community-focused pages.</p><div class="social-grid"><div class="social-card"><strong>UPM-SHS at 50</strong><span>2026 Anniversary Project</span></div><div class="social-card"><strong>UP Manila National Institutes of Health</strong><span>Social Media Management</span></div><div class="social-card"><strong>UP Manila National Telehealth Center</strong><span>Social Media Management</span></div><div class="social-card"><strong>Sweet-Yan's Creativity Corner</strong><span>Start–Present</span></div><div class="social-card"><strong>YouKind</strong><span>December 2023–2024</span></div><div class="social-card"><strong>Yani Cooks</strong><span>Start–Present · Instagram</span></div><div class="social-card"><strong>PCM Tacloban</strong><span>Social Media</span></div></div></div></div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head reveal"><div class="section-number">07 / Creative Writing</div><div><h2 class="section-title">Writing with a human voice.</h2><p class="section-intro">Personal and literary work that reflects my interest in storytelling, emotion, reflection, and the power of words.</p></div></div>
+<div class="writing-grid">
+<div class="writing-item reveal"><h3>How's Your Heart, Buddy?</h3><p>Literary / Personal Blog</p><a href="https://glisterdiademd.wordpress.com/2023/04/07/hows-your-heart-buddy/" target="_blank">Read piece ↗</a></div>
+<div class="writing-item reveal"><h3>A Week of Tears</h3><p>Literary / Personal Blog</p><a href="https://glisterdiademd.wordpress.com/2023/02/23/a-week-of-tears/" target="_blank">Read piece ↗</a></div>
+<div class="writing-item reveal"><h3>The Value of Originals</h3><p>Literary / Personal Blog</p><a href="https://glisterdiademd.wordpress.com/2023/05/22/the-value-of-originals-rediscovering-the-beauty-beyond-copies/" target="_blank">Read piece ↗</a></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-head reveal"><div class="section-number">08 / Previous Clients</div><div><h2 class="section-title">Trusted by clients and organizations.</h2><p class="section-intro">Previous clients include academic and healthcare institutions, international companies, and organizations across the Philippines, the United States, and the United Kingdom.</p></div></div>
+<div class="ref-grid">
+<div class="ref reveal"><h3>UP Manila School of Health Sciences</h3><p>Ma. Sheryl Indencia · Palo, Leyte, Philippines</p></div>
+<div class="ref reveal"><h3>UP Manila National Telehealth Center</h3><p>Arturo Ongkeko Jr. · Ermita, Manila City, Philippines</p></div>
+<div class="ref reveal"><h3>Christian Digital Network</h3><p>Jennifer Gietzmann · Chanhassen, Minnesota, USA</p></div>
+<div class="ref reveal"><h3>NOVAEO</h3><p>Lovejoy Madulara · Tampa, Florida, USA</p></div>
+<div class="ref reveal"><h3>KMA Web Design</h3><p>Kerry Aglugub · Massachusetts, USA</p></div>
+<div class="ref reveal"><h3>YouKind · Hands Hunters LTD</h3><p>Aleah Nabor · London, United Kingdom</p></div>
+<div class="ref reveal"><h3>Team Cambrian</h3><p>Flora Lee · International Client</p></div>
+</div>
+<p style="font-size:12px;color:var(--gray-500);margin-top:20px">Professional references and contact details are available upon request.</p>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container">
+<div class="eyebrow">09 / Let's Work Together</div>
+<h2 class="section-title">Have a story, brand, or idea that needs the right words?</h2>
+<p class="contact-copy">Whether you need SEO articles, website copy, social media content, content strategy, promotional campaigns, or creative writing, I'd be happy to work with you.</p>
+<div class="buttons"><a class="btn primary" href="mailto:glisterdiadem@gmail.com">Email Me →</a></div>
+</div>
+</section>
+
+</main>
+
+<footer class="container">
+<span>© 2026 Glister Diadem Dollera</span>
+<span>Writer · Copywriter · Content Strategist</span>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
