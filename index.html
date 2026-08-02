@@ -86,7 +86,7 @@
     .project-card{background:white;border:1px solid var(--gray-300);overflow:hidden;transition:.25s}
     .project-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
     .project-card.hidden{display:none}
-    .preview{height:260px;display:block;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--maroon-soft),var(--green-soft))}
+    .preview{aspect-ratio:16/9;height:auto;display:block;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--maroon-soft),var(--green-soft))}
     .preview img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:.35s}
     .project-card:hover .preview img{transform:scale(1.025)}
     .preview-fallback{position:absolute;inset:0;display:grid;place-items:center;color:rgba(100,31,43,.16);font:700 72px var(--serif)}
@@ -137,8 +137,8 @@
     .hero-side .hero-stat-card strong{font-size:31px}
     .hero-side .hero-stat-card span{display:block;font-size:9px;line-height:1.35}
     .intro-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:22px;align-items:stretch}
-    .video-card{position:relative;display:block;overflow:hidden;min-height:430px;background:var(--maroon-deep);border:1px solid var(--gray-300);box-shadow:var(--shadow)}
-    .video-card img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s}
+    .video-card{position:relative;display:block;overflow:hidden;aspect-ratio:16/9;min-height:0;background:var(--maroon-deep);border:1px solid var(--gray-300);box-shadow:var(--shadow)}
+    .video-card img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:.35s}
     .video-card:hover img{transform:scale(1.025)}
     .video-card:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(32,35,32,.32),transparent 45%)}
     .video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:78px;height:78px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.94);color:var(--maroon);font-size:27px;box-shadow:0 15px 35px rgba(0,0,0,.22);transition:.2s}
@@ -174,7 +174,7 @@
       .container{width:calc(100% - 28px)} .hero{padding:82px 0 72px}
       h1{font-size:56px} section{padding:72px 0}
       .expertise-grid,.social-list,.process-grid,.hero-side .hero-stat-card{grid-template-columns:1fr}.hero-side .hero-stat-card div{border-left:0;border-top:1px solid var(--gray-300);padding:10px 0 0}.hero-side .hero-stat-card div:first-child{border-top:0;padding-top:0}.photo-story{grid-template-columns:1fr}.photo-story figure:first-child{grid-column:auto}.hero-photo{min-height:500px}
-      .preview{height:220px} .footer-inner{display:block}
+      .preview{height:auto} .footer-inner{display:block}
     }
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
   </style>
@@ -208,7 +208,7 @@
         </div>
         <div class="hero-side">
           <figure class="hero-photo">
-            <img src="glister-park.webp" alt="Glister Diadem Dollera outdoors in a tree-lined park">
+            <img src="glister-hero.webp" alt="Portrait of Glister Diadem Dollera in a maroon top">
             <figcaption>Writer · Strategist · Creative communicator</figcaption>
           </figure>
           <aside class="hero-stat-card" aria-label="Portfolio highlights">
@@ -308,7 +308,7 @@
     <article class="project-card reveal" data-category="seo ecommerce">
       <a class="preview" href="https://www.treeactiv.com/blogs/treeactiv-blog/teenage-skincare-acne-fighting-face-cleansers-guide" target="_blank" rel="noopener">
         <div class="preview-fallback"><strong>TE</strong></div>
-        <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.treeactiv.com%2Fblogs%2Ftreeactiv-blog%2Fteenage-skincare-acne-fighting-face-cleansers-guide?w=1200" alt="Website preview for Teenage Skincare: Acne-Fighting Face Cleansers Guide" onerror="this.style.display='none'">
+        <img loading="lazy" src="seo-thumbnails/treeactiv-teenage-skincare.jpg" alt="Website preview for Teenage Skincare: Acne-Fighting Face Cleansers Guide" onerror="this.style.display='none'">
         <span class="open-badge">Open project ↗</span>
       </a>
       <div class="project-copy">
@@ -324,7 +324,7 @@
     <article class="project-card reveal" data-category="seo ecommerce">
       <a class="preview" href="https://www.treeactiv.com/blogs/treeactiv-blog/top-5-face-cleanser-a-complete-comparison-of-the-best-products" target="_blank" rel="noopener">
         <div class="preview-fallback"><strong>TO</strong></div>
-        <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.treeactiv.com%2Fblogs%2Ftreeactiv-blog%2Ftop-5-face-cleanser-a-complete-comparison-of-the-best-products?w=1200" alt="Website preview for Top 5 Face Cleansers: A Complete Comparison" onerror="this.style.display='none'">
+        <img loading="lazy" src="seo-thumbnails/treeactiv-top-face-cleansers.jpg" alt="Website preview for Top 5 Face Cleansers: A Complete Comparison" onerror="this.style.display='none'">
         <span class="open-badge">Open project ↗</span>
       </a>
       <div class="project-copy">
@@ -340,7 +340,7 @@
     <article class="project-card reveal" data-category="seo ecommerce">
       <a class="preview" href="https://www.yanrefitness.com/how-to-open-a-gym-with-no-money/" target="_blank" rel="noopener">
         <div class="preview-fallback"><strong>HO</strong></div>
-        <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.yanrefitness.com%2Fhow-to-open-a-gym-with-no-money%2F?w=1200" alt="Website preview for How to Open a Gym with No Money" onerror="this.style.display='none'">
+        <img loading="lazy" src="seo-thumbnails/yanre-open-gym.jpg" alt="Website preview for How to Open a Gym with No Money" onerror="this.style.display='none'">
         <span class="open-badge">Open project ↗</span>
       </a>
       <div class="project-copy">
@@ -356,7 +356,7 @@
     <article class="project-card reveal" data-category="seo ecommerce">
       <a class="preview" href="https://nakocos.com/top-10-cosmetic-manufacturer/" target="_blank" rel="noopener">
         <div class="preview-fallback"><strong>TO</strong></div>
-        <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnakocos.com%2Ftop-10-cosmetic-manufacturer%2F?w=1200" alt="Website preview for Top 10 Cosmetic Manufacturer" onerror="this.style.display='none'">
+        <img loading="lazy" src="seo-thumbnails/nako-cosmetic-manufacturer.jpg" alt="Website preview for Top 10 Cosmetic Manufacturer" onerror="this.style.display='none'">
         <span class="open-badge">Open project ↗</span>
       </a>
       <div class="project-copy">
@@ -372,7 +372,7 @@
     <article class="project-card reveal" data-category="seo ecommerce">
       <a class="preview" href="https://standmore.com/blogs/news/exploring-ergonomic-benefits-of-standmore-collapsible-standing-desk" target="_blank" rel="noopener">
         <div class="preview-fallback"><strong>ER</strong></div>
-        <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fstandmore.com%2Fblogs%2Fnews%2Fexploring-ergonomic-benefits-of-standmore-collapsible-standing-desk?w=1200" alt="Website preview for Ergonomic Benefits of the StandMore Collapsible Standing Desk" onerror="this.style.display='none'">
+        <img loading="lazy" src="seo-thumbnails/standmore-ergonomic-desk.jpg" alt="Website preview for Ergonomic Benefits of the StandMore Collapsible Standing Desk" onerror="this.style.display='none'">
         <span class="open-badge">Open project ↗</span>
       </a>
       <div class="project-copy">
@@ -388,7 +388,7 @@
     <article class="project-card reveal" data-category="seo ecommerce">
       <a class="preview" href="https://natrisweet.com/blogs/natrisweet-blog/organic-monk-fruit-extract-a-sweet-solution-to-health-conscious-living" target="_blank" rel="noopener">
         <div class="preview-fallback"><strong>OR</strong></div>
-        <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fnatrisweet.com%2Fblogs%2Fnatrisweet-blog%2Forganic-monk-fruit-extract-a-sweet-solution-to-health-conscious-living?w=1200" alt="Website preview for Organic Monk Fruit Extract: A Sweet Solution" onerror="this.style.display='none'">
+        <img loading="lazy" src="seo-thumbnails/natrisweet-monk-fruit.jpg" alt="Website preview for Organic Monk Fruit Extract: A Sweet Solution" onerror="this.style.display='none'">
         <span class="open-badge">Open project ↗</span>
       </a>
       <div class="project-copy">
@@ -404,7 +404,7 @@
     <article class="project-card reveal" data-category="seo">
       <a class="preview" href="https://comm-clean.com/emergency-flood-services-to-help-restore-your-business-operations/" target="_blank" rel="noopener">
         <div class="preview-fallback"><strong>EM</strong></div>
-        <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcomm-clean.com%2Femergency-flood-services-to-help-restore-your-business-operations%2F?w=1200" alt="Website preview for Emergency Flood Services to Restore Business Operations" onerror="this.style.display='none'">
+        <img loading="lazy" src="seo-thumbnails/comm-clean-flood-services.jpg" alt="Website preview for Emergency Flood Services to Restore Business Operations" onerror="this.style.display='none'">
         <span class="open-badge">Open project ↗</span>
       </a>
       <div class="project-copy">
@@ -420,7 +420,7 @@
     <article class="project-card reveal" data-category="seo editorial">
       <a class="preview" href="https://www.creationillustrated.com/how-to-help-your-family-cope-with-anxiety-tips-and-bible-verses/" target="_blank" rel="noopener">
         <div class="preview-fallback"><strong>HO</strong></div>
-        <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.creationillustrated.com%2Fhow-to-help-your-family-cope-with-anxiety-tips-and-bible-verses%2F?w=1200" alt="Website preview for How to Help Your Family Cope with Anxiety" onerror="this.style.display='none'">
+        <img loading="lazy" src="seo-thumbnails/creation-anxiety-family.jpg" alt="Website preview for How to Help Your Family Cope with Anxiety" onerror="this.style.display='none'">
         <span class="open-badge">Open project ↗</span>
       </a>
       <div class="project-copy">
@@ -436,7 +436,7 @@
     <article class="project-card reveal" data-category="seo editorial">
       <a class="preview" href="https://www.creationillustrated.com/why-reading-a-magazine-daily-can-transform-your-life/" target="_blank" rel="noopener">
         <div class="preview-fallback"><strong>WH</strong></div>
-        <img loading="lazy" src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.creationillustrated.com%2Fwhy-reading-a-magazine-daily-can-transform-your-life%2F?w=1200" alt="Website preview for Why Reading a Magazine Daily Can Transform Your Life!" onerror="this.style.display='none'">
+        <img loading="lazy" src="seo-thumbnails/creation-magazine-daily.jpg" alt="Website preview for Why Reading a Magazine Daily Can Transform Your Life!" onerror="this.style.display='none'">
         <span class="open-badge">Open project ↗</span>
       </a>
       <div class="project-copy">
