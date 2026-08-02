@@ -774,6 +774,325 @@
     }
   </style>
 
+
+  <style>
+    .feedback-slider{
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      gap:16px;
+      align-items:center;
+    }
+    .feedback-track-wrap{
+      overflow:hidden;
+    }
+    .feedback-track{
+      display:flex;
+      transition:transform .38s ease;
+      width:100%;
+    }
+    .feedback-slide{
+      min-width:100%;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .feedback-image-card,
+    .feedback-copy{
+      background:#fff;
+      border:1px solid var(--gray-300);
+      border-radius:18px;
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+    }
+    .feedback-image-card{
+      padding:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#f8f7f5;
+    }
+    .feedback-image-card img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+      object-fit:contain;
+    }
+    .feedback-copy{
+      padding:30px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .feedback-kicker{
+      margin:0;
+      color:var(--green);
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .feedback-copy h3{
+      margin:10px 0 12px;
+      font:500 34px/1.08 var(--serif);
+    }
+    .feedback-copy p:not(.feedback-kicker){
+      margin:0;
+      color:var(--gray-700);
+    }
+    .feedback-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:20px;
+    }
+    .feedback-tags span{
+      padding:8px 10px;
+      background:#efe7ea;
+      color:var(--maroon-deep);
+      border:1px solid #e0cfd5;
+      font-size:9px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+    .feedback-arrow{
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      border:1px solid var(--gray-300);
+      background:#fff;
+      color:var(--maroon);
+      font-size:30px;
+      line-height:1;
+      cursor:pointer;
+      box-shadow:var(--shadow-soft);
+      transition:.2s ease;
+    }
+    .feedback-arrow:hover{
+      transform:translateY(-2px);
+      background:var(--maroon);
+      color:#fff;
+      border-color:var(--maroon);
+    }
+    .feedback-dots{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin-top:18px;
+    }
+    .feedback-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      border:0;
+      background:#c4cbc4;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+    .feedback-dot.active{
+      background:var(--maroon);
+      transform:scale(1.18);
+    }
+
+    @media(max-width:980px){
+      .feedback-slide{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:700px){
+      .feedback-slider{
+        grid-template-columns:1fr;
+      }
+      .feedback-arrow{
+        display:none;
+      }
+      .feedback-copy{
+        padding:22px;
+      }
+      .feedback-copy h3{
+        font-size:28px;
+      }
+    }
+  </style>
+
+
+  <style>
+    .newsletter{
+      background:linear-gradient(135deg,#edf2ed 0%,#f7f4f2 100%);
+    }
+    .newsletter-shell{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:42px;
+      padding:44px;
+      border:1px solid var(--gray-300);
+      border-radius:24px;
+      background:#fff;
+      box-shadow:var(--shadow-lift);
+      align-items:center;
+    }
+    .newsletter-copy h2{
+      margin:15px 0 14px;
+      max-width:560px;
+      font:500 clamp(38px,5vw,62px)/.98 var(--serif);
+      letter-spacing:-.045em;
+    }
+    .newsletter-copy>p{
+      margin:0;
+      max-width:590px;
+      color:var(--gray-700);
+    }
+    .newsletter-points{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:24px;
+    }
+    .newsletter-points span{
+      padding:8px 10px;
+      border:1px solid #d1ddd5;
+      background:#e8efe9;
+      color:var(--green-deep);
+      font-size:9px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+    .newsletter-form{
+      display:grid;
+      gap:16px;
+      padding:26px;
+      border-radius:18px;
+      background:var(--gray-100);
+      border:1px solid var(--gray-300);
+    }
+    .newsletter-form label{
+      display:grid;
+      gap:7px;
+    }
+    .newsletter-form label>span:first-child{
+      color:var(--gray-700);
+      font-size:9px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .form-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:13px;
+    }
+    .newsletter-form input[type="text"],
+    .newsletter-form input[type="email"],
+    .newsletter-form select{
+      width:100%;
+      min-height:48px;
+      padding:12px 13px;
+      border:1px solid var(--gray-300);
+      border-radius:10px;
+      background:#fff;
+      color:var(--gray-950);
+      font:inherit;
+      font-size:13px;
+      outline:none;
+      transition:border-color .2s ease,box-shadow .2s ease;
+    }
+    .newsletter-form input:focus,
+    .newsletter-form select:focus{
+      border-color:var(--green);
+      box-shadow:0 0 0 4px rgba(49,91,72,.10);
+    }
+    .consent-row{
+      display:grid!important;
+      grid-template-columns:auto 1fr;
+      align-items:start;
+      gap:10px!important;
+      color:var(--gray-700);
+      font-size:11px;
+      line-height:1.5;
+    }
+    .consent-row input{
+      width:17px;
+      height:17px;
+      margin-top:2px;
+      accent-color:var(--maroon);
+    }
+    .consent-row span{
+      text-transform:none!important;
+      letter-spacing:0!important;
+      font-size:11px!important;
+      font-weight:500!important;
+    }
+    .newsletter-submit{
+      min-height:50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      padding:13px 17px;
+      border:1px solid var(--maroon);
+      border-radius:10px;
+      background:var(--maroon);
+      color:#fff;
+      font-size:10px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      cursor:pointer;
+      transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+    }
+    .newsletter-submit:hover{
+      transform:translateY(-2px);
+      background:var(--maroon-deep);
+      box-shadow:0 12px 28px rgba(70,21,31,.17);
+    }
+    .newsletter-privacy{
+      margin:0;
+      color:var(--gray-700);
+      font-size:10px;
+    }
+    .newsletter-success{
+      display:none;
+      padding:13px 14px;
+      border-radius:10px;
+      border:1px solid #bfd0c4;
+      background:#e8efe9;
+      color:var(--green-deep);
+      font-size:12px;
+      font-weight:700;
+    }
+    .newsletter-success.visible{
+      display:block;
+    }
+    .form-honeypot{
+      position:absolute!important;
+      left:-9999px!important;
+      opacity:0!important;
+      pointer-events:none!important;
+    }
+
+    @media(max-width:980px){
+      .newsletter-shell{
+        grid-template-columns:1fr;
+        padding:32px;
+      }
+    }
+    @media(max-width:700px){
+      .newsletter-shell{
+        padding:22px;
+      }
+      .newsletter-form{
+        padding:19px;
+      }
+      .form-row{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -794,7 +1113,9 @@
         <a href="#seo">SEO Work</a>
         <a href="#featured">Featured</a>
         <a href="#social">Social</a>
+        <a href="#feedback">Feedback</a>
         <a href="#more">More Work</a>
+        <a href="#newsletter">Updates</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -1160,10 +1481,70 @@
     </div>
   </section>
 
+  
+  <section id="feedback">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-number">08 / Client Feedback</div>
+        <div>
+          <h2 class="section-title">What clients say.</h2>
+          <p class="section-intro">A few snapshots of kind feedback from clients and collaborators, reflecting responsiveness, writing quality, clarity, and consistency of work.</p>
+        </div>
+      </div>
+
+      <div class="feedback-slider reveal" aria-label="Client feedback slider">
+        <button class="feedback-arrow prev" type="button" aria-label="Previous feedback">‹</button>
+
+        <div class="feedback-track-wrap">
+          <div class="feedback-track">
+            <article class="feedback-slide active">
+              <div class="feedback-image-card">
+                <img src="client-feedback-1.webp" alt="Client feedback collage showing positive comments and appreciation for Glister's work">
+              </div>
+              <div class="feedback-copy">
+                <p class="feedback-kicker">Client feedback</p>
+                <h3>Appreciation for thoughtful, high-quality work</h3>
+                <p>Feedback highlights strong writing, polished outputs, and dependable support across content and communication projects.</p>
+                <div class="feedback-tags">
+                  <span>Writing quality</span>
+                  <span>Professionalism</span>
+                  <span>Reliability</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="feedback-slide">
+              <div class="feedback-image-card">
+                <img src="client-feedback-2.webp" alt="Client feedback screenshot featuring encouraging comments about blog-post quality and communication">
+              </div>
+              <div class="feedback-copy">
+                <p class="feedback-kicker">Client feedback</p>
+                <h3>Encouraging responses to content and collaboration</h3>
+                <p>Clients consistently respond positively to the clarity, usefulness, and overall quality of the work delivered.</p>
+                <div class="feedback-tags">
+                  <span>Content clarity</span>
+                  <span>Client satisfaction</span>
+                  <span>Communication</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <button class="feedback-arrow next" type="button" aria-label="Next feedback">›</button>
+      </div>
+
+      <div class="feedback-dots" aria-label="Feedback slide navigation">
+        <button class="feedback-dot active" type="button" aria-label="Go to feedback 1"></button>
+        <button class="feedback-dot" type="button" aria-label="Go to feedback 2"></button>
+      </div>
+    </div>
+  </section>
+
   <section id="more">
     <div class="container">
       <div class="section-head reveal">
-        <div class="section-number">08 / More Work</div>
+        <div class="section-number">09 / More Work</div>
         <div>
           <h2 class="section-title">Copywriting, campaigns, and editorial range.</h2>
           <p class="section-intro">Selected landing pages, campaigns, scripts, and personal essays that reflect a broader editorial and creative range.</p>
@@ -1224,10 +1605,73 @@
     </div>
   </section>
 
+  
+  <section id="newsletter" class="newsletter">
+    <div class="container">
+      <div class="newsletter-shell reveal">
+        <div class="newsletter-copy">
+          <div class="section-number">10 / Stay Updated</div>
+          <h2>Ideas, projects, and occasional updates.</h2>
+          <p>Join my email list for new writing, portfolio updates, creative projects, and selected insights on content, SEO, and digital communication.</p>
+          <div class="newsletter-points">
+            <span>Portfolio updates</span>
+            <span>New writing</span>
+            <span>Content insights</span>
+          </div>
+        </div>
+
+        <form class="newsletter-form" action="https://formsubmit.co/gadollera@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New portfolio newsletter signup">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" value="https://gadollera-tech.github.io/?subscribed=true#newsletter">
+          <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+          <div class="form-row">
+            <label>
+              <span>First name</span>
+              <input type="text" name="First name" autocomplete="given-name" placeholder="Your name">
+            </label>
+
+            <label>
+              <span>Email address</span>
+              <input type="email" name="Email address" autocomplete="email" placeholder="you@example.com" required>
+            </label>
+          </div>
+
+          <label>
+            <span>What would you like to receive?</span>
+            <select name="Update preference">
+              <option value="All updates">All updates</option>
+              <option value="SEO and content insights">SEO and content insights</option>
+              <option value="Portfolio and project updates">Portfolio and project updates</option>
+              <option value="Creative writing">Creative writing</option>
+            </select>
+          </label>
+
+          <label class="consent-row">
+            <input type="checkbox" name="Consent" value="Yes, I agree to receive occasional email updates." required>
+            <span>I agree to receive occasional email updates from Glister Diadem Dollera. I may request removal at any time.</span>
+          </label>
+
+          <button class="newsletter-submit" type="submit">
+            <span>Join the email list</span>
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <p class="newsletter-privacy">No spam. Your email will only be used for the updates you selected.</p>
+          <div class="newsletter-success" role="status" aria-live="polite">
+            Thank you—your subscription request has been received.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-head reveal">
-        <div class="section-number" style="color:#dcb7bf">09 / Contact</div>
+        <div class="section-number" style="color:#dcb7bf">11 / Contact</div>
         <div>
           <h2 class="section-title">Let’s work together.</h2>
           <p class="section-intro">Available for SEO and e-commerce content, strategy, copywriting, social media management, web content, and creative communications.</p>
@@ -1449,6 +1893,88 @@
     handleScroll();
 
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  })();
+  </script>
+
+
+  <script>
+  (() => {
+    const slides = document.querySelectorAll('.feedback-slide');
+    const track = document.querySelector('.feedback-track');
+    const prevBtn = document.querySelector('.feedback-arrow.prev');
+    const nextBtn = document.querySelector('.feedback-arrow.next');
+    const dots = document.querySelectorAll('.feedback-dot');
+
+    if (slides.length && track && prevBtn && nextBtn && dots.length) {
+      let currentSlide = 0;
+      let autoAdvance;
+
+      function renderSlide(index) {
+        currentSlide = index;
+        track.style.transform = `translateX(-${index * 100}%)`;
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      }
+
+      function nextSlide() {
+        renderSlide((currentSlide + 1) % slides.length);
+      }
+
+      function prevSlide() {
+        renderSlide((currentSlide - 1 + slides.length) % slides.length);
+      }
+
+      function startAutoAdvance() {
+        stopAutoAdvance();
+        autoAdvance = setInterval(nextSlide, 5500);
+      }
+
+      function stopAutoAdvance() {
+        if (autoAdvance) clearInterval(autoAdvance);
+      }
+
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoAdvance();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoAdvance();
+      });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          renderSlide(i);
+          startAutoAdvance();
+        });
+      });
+
+      const slider = document.querySelector('.feedback-slider');
+      if (slider) {
+        slider.addEventListener('mouseenter', stopAutoAdvance);
+        slider.addEventListener('mouseleave', startAutoAdvance);
+      }
+
+      renderSlide(0);
+      startAutoAdvance();
+    }
+  })();
+  </script>
+
+
+  <script>
+  (() => {
+    const params = new URLSearchParams(window.location.search);
+    const success = document.querySelector('.newsletter-success');
+
+    if (params.get('subscribed') === 'true' && success) {
+      success.classList.add('visible');
+      setTimeout(() => success.scrollIntoView({ behavior: 'smooth', block: 'center' }), 250);
+
+      const cleanUrl = `${window.location.pathname}#newsletter`;
+      window.history.replaceState({}, document.title, cleanUrl);
+    }
   })();
   </script>
 

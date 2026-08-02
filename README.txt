@@ -1,32 +1,25 @@
-GLISTER DIADEM DOLLERA — CLIENT-READY PORTFOLIO
+GLISTER DIADEM DOLLERA — CLIENT-READY PORTFOLIO WITH NEWSLETTER SIGNUP
 
-This package includes:
-- polished client-facing copy
-- interactive global client experience tabs
-- SEO project filters
-- active navigation and mobile menu
-- scroll-reveal transitions
-- clickable photo lightbox
-- back-to-top button
-- centered, tightly cropped NIH logo
-- official UPM-SHS at 50 and UPM NIH logos
-- local SEO thumbnails and personal images
+This version includes:
+- interactive portfolio
+- client feedback carousel
+- Stay Updated email signup section
+- name, email, and content-interest fields
+- explicit email consent checkbox
+- spam honeypot and CAPTCHA
+- confirmation message after submission
 
-GITHUB UPDATE
-Upload every file and folder from this package to the root of the repository.
-Replace the existing index.html and logo-upm-nih.png.
-Also upload global-client-map.svg.
+HOW THE SIGNUP WORKS
+The form uses FormSubmit to send subscription requests to:
+gadollera@gmail.com
 
-Required folders and files include:
-- index.html
-- global-client-map.svg
-- logo-upm-shs50.png
-- logo-upm-nih.png
-- glister-hero.webp
-- glister-park.webp
-- glister-portrait.webp
-- glister-city.webp
-- video-intro-thumbnail.jpg
-- seo-thumbnails/
+IMPORTANT FIRST-TIME ACTIVATION
+1. Upload the updated index.html to GitHub.
+2. Open the live website.
+3. Submit one test subscription.
+4. Check gadollera@gmail.com for the FormSubmit activation email.
+5. Click the confirmation link.
+6. After activation, future signups will be delivered to the email inbox.
 
-After committing, allow GitHub Pages a few minutes to rebuild, then use Ctrl + F5.
+This setup collects subscription requests by email. It does not automatically send newsletters.
+For automatic campaigns, import the subscribers into a newsletter platform such as Mailchimp, Brevo, or Buttondown.
