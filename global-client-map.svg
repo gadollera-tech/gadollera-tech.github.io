@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+<title id="title">International client experience</title>
+<desc id="desc">Stylized world map highlighting the United States, England, China, South Africa, and the Philippines.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#f1f4f0"/>
+  </linearGradient>
+  <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#203f32" flood-opacity=".10"/>
+  </filter>
+</defs>
+<rect width="1200" height="650" rx="28" fill="url(#bg)"/>
+<rect x="26" y="26" width="1148" height="598" rx="24" fill="#fff" stroke="#d5d9d4" filter="url(#softShadow)"/>
+
+<g transform="translate(55 40)">
+  <g fill="#e1e9e3" stroke="#bdcec2" stroke-width="3">
+    <path d="M55 177c20-44 84-78 142-83 64-6 124 6 164 29 32 19 64 57 52 85-7 18-34 25-55 39-18 12-22 39-41 55-23 19-61 22-91 10-31-13-51-47-82-51-29-4-73 21-99 6-20-11-30-39-24-66 5-22 20-17 34-24z"/>
+    <path d="M292 336c29-11 74 5 105 22 39 21 77 60 79 95 1 27-19 48-39 60-23 14-55 14-78-2-20-14-22-43-35-62-13-18-39-24-52-42-12-17-13-54 20-71z"/>
+    <path d="M455 140c43-33 119-53 198-51 96 2 172 22 224 61 52 38 76 87 63 129-12 39-61 61-95 81-33 20-50 58-88 75-39 17-94 19-136 6-55-18-75-71-134-86-56-15-137-2-164-35-21-26-4-66 23-97 24-29 75-48 109-83z"/>
+    <path d="M700 366c35-5 77 6 104 26 30 22 45 62 38 94-6 29-27 46-51 56-25 11-59 16-84 3-24-13-30-46-39-69-9-22-32-41-32-63 0-20 17-44 36-48 4-1 23 1 28 1z"/>
+    <path d="M864 165c28-20 65-30 103-26 47 5 85 24 108 49 26 28 39 67 27 94-10 25-44 35-63 55-19 18-20 49-40 63-23 17-61 18-86 7-27-13-41-43-66-52-27-10-64 0-84-15-16-12-23-37-17-59 8-32 49-35 69-59 16-19 28-43 49-57z"/>
+    <path d="M985 405c23-14 50-17 78-8 26 9 49 31 54 55 5 19-1 42-16 57-16 16-40 24-63 20-25-4-38-27-50-45-13-19-34-37-32-56 1-10 17-16 29-23z"/>
+  </g>
+
+  <g fill="none" stroke="#9db6a5" stroke-width="3" stroke-dasharray="8 10" opacity=".85">
+    <path d="M248 200 C430 70 675 85 838 214"/>
+    <path d="M248 200 C480 180 705 285 785 455"/>
+    <path d="M248 200 C425 115 535 120 594 159"/>
+    <path d="M594 159 C700 138 785 170 838 214"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-weight="700">
+    <g transform="translate(248 200)">
+      <circle r="25" fill="#641f2b" opacity=".14"/><circle r="10" fill="#641f2b"/>
+      <text x="-54" y="-28" font-size="17" fill="#641f2b">USA</text>
+    </g>
+    <g transform="translate(594 159)">
+      <circle r="25" fill="#315b48" opacity=".14"/><circle r="10" fill="#315b48"/>
+      <text x="-30" y="-28" font-size="17" fill="#315b48">UK</text>
+    </g>
+    <g transform="translate(838 214)">
+      <circle r="25" fill="#8d5260" opacity=".14"/><circle r="10" fill="#8d5260"/>
+      <text x="-23" y="-28" font-size="17" fill="#8d5260">China</text>
+    </g>
+    <g transform="translate(938 310)">
+      <circle r="25" fill="#717f58" opacity=".14"/><circle r="10" fill="#717f58"/>
+      <text x="-45" y="-28" font-size="17" fill="#717f58">Philippines</text>
+    </g>
+    <g transform="translate(785 455)">
+      <circle r="25" fill="#53668e" opacity=".14"/><circle r="10" fill="#53668e"/>
+      <text x="-54" y="42" font-size="17" fill="#53668e">South Africa</text>
+    </g>
+  </g>
+</g>
+</svg>
