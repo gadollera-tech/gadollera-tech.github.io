@@ -1,14 +1,15 @@
-GLISTER DIADEM DOLLERA — FINAL PORTFOLIO WEBSITE
+GLISTER DIADEM DOLLERA — PORTFOLIO WEBSITE (INTEGRATED LOGOS)
 
 This version includes:
-- New hero portrait
-- Three personal photos
-- 16:9 landscape video-introduction thumbnail
-- Nine locally stored SEO article thumbnails
-- Contact information and clickable LinkedIn, email, WhatsApp, Viber, and mobile links
-- Interactive filters and responsive design
+- clean portfolio layout
+- integrated UPM SHS at 50 logo
+- integrated UP Manila National Institutes of Health logo
+- personal photos
+- landscape video thumbnail
+- local SEO preview thumbnails
+- full contact details
 
-UPLOAD ALL FILES AND FOLDERS TO GITHUB
+UPLOAD ALL FILES TO GITHUB:
 - index.html
 - favicon.svg
 - glister-hero.webp
@@ -16,17 +17,15 @@ UPLOAD ALL FILES AND FOLDERS TO GITHUB
 - glister-portrait.webp
 - glister-city.webp
 - video-intro-thumbnail.jpg
+- logo-upm-shs50.png
+- logo-upm-nih.png
 - seo-thumbnails folder and all images inside it
 
-GitHub steps:
-1. Extract the ZIP.
-2. Open your GitHub Pages repository.
-3. Upload every file and the seo-thumbnails folder.
-4. Replace the existing index.html.
-5. Commit changes.
-6. Wait a few minutes and hard-refresh the published site.
-
-Contact:
-gadollera@gmail.com
-https://ph.linkedin.com/in/glister-diadem-dollera
-+63 956 647 8040
+To update GitHub:
+1. Extract this ZIP.
+2. Open your GitHub repository.
+3. Click Add file > Upload files.
+4. Upload everything from the extracted folder.
+5. Replace the old files when prompted.
+6. Commit changes.
+7. Refresh your GitHub Pages site after a few minutes.
